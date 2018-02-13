@@ -1,0 +1,17 @@
+#send-box {
+  width: 240px;
+  margin-left: 20px;
+  height: 90px;
+  &>div {
+    font-size: 28px;
+    color: #fff;
+    background: #000;
+    height: 100%;
+    line-height: 90px;
+    text-align: center;
+    &.send{
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+    }
+  }
+}

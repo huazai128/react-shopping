@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "removeComments": true,
+    "strictNullChecks": false,
+    "allowSyntheticDefaultImports": true,
+    
+    "outDir": "dist",
+    "lib": [
+      "es6",
+      "es7",
+      "dom"
+    ],
+    "types": [
+      "react",
+      "react-dom"
+    ]
+  },
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules/"
+  ],
+  "compileOnSave": false,
+  "baseUrl": ".",
+  "paths": {
+    "@components/*": [
+      ".src/components/*"
+    ],
+    "@interface":[
+      ".src/interface"
+    ]
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true,
+    "silent": true
+  }
+}

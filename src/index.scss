@@ -1,0 +1,26 @@
+@import "partials/flex";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff !important;
+  color: #333;
+}
+body {
+  font-size: 0.32rem !important;
+}
+#root {
+  height: 100%;
+}
+.am-list-item .am-input-control input{
+  font-size: 28px !important;
+}
+.am-list-body{
+  border: 0 !important;
+}
+.am-list-body::after,.am-list-body::before{
+  background: transparent !important;
+}

@@ -1,0 +1,29 @@
+{
+  "presets": [
+    "env",
+    "react",
+    "stage-0"
+    // "react-hmre",
+    // ["es2015", {
+    //   "modules": false
+    // }]
+  ],
+  "plugins": [
+    // "dynamic-import-node",
+    // "syntax-dynamic-import",
+    // "transform-runtime", 使用babel-polyfill就不用这个了，作用差不多
+    "transform-class-properties", 
+    ["import", {
+      "libraryName": "antd-mobile",
+      "style": true
+    }]
+  ],
+   "env": {
+    // 开发环境开启热启动
+    "development": {
+      "presets": [
+        "react-hmre"
+      ]
+    }
+  }
+}
