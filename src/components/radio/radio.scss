@@ -6,6 +6,18 @@
     margin-right: 20px;
     border: 1px solid #333;
     border-radius: 50%;
+    &::before{
+      transition: all 0.3s linear;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      content:"";
+      transform-origin: center;
+      border-radius: 50%;
+      background: #333;
+    }
     .radio-type{
       position: absolute;
       top: 0;
@@ -16,14 +28,12 @@
       opacity: 0;
     }
     &.select::before{
-      position: absolute;
+      transition: all 0.3s linear;
+      transform-origin: center;
       top: 6px;
       left: 6px;
       width: 22px;
       height: 22px;
-      content:"";
-      border-radius: 50%;
-      background: #333;
     }
   }
 }

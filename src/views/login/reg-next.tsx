@@ -16,15 +16,18 @@ export default class RegNext extends React.Component<RegNextType, any> {
       idx: 0
     }
   }
-  RadioChange = () => {
-
+  radioChange = (index:number) => {
+    console.log(index);
+    this.setState({
+      idx:index
+    })
   }
   render() {
     const { getFieldProps } = this.props.form;
     const { idx } = this.state;
     const data = [
-      { value: 0, label: 'doctor', },
-      { value: 1, label: 'bachelor', },
+      { value: 0, label: '女', },
+      { value: 1, label: '男', },
     ];
     return (
       <div id="next">
@@ -49,15 +52,19 @@ export default class RegNext extends React.Component<RegNextType, any> {
             <div className="flex-g-1 flex">
               { data.map((item,index) => {
                 return (
-                  <RadioCom value={ item.value } key={index} label={ item.label } onchange={this.RadioChange} checked={ index === idx} />
+                  <div key={index} className="flex-col-3">
+                    <RadioCom value={ item.value }  label={ item.label } change={() => { this.radioChange(index); }} checked={ index === idx} />
+                  </div>
                 )
               }) }
-              
             </div>
           </div>
+          <div className="flex form-group">
+            <div className="label">* 生日</div>
+            <div className="flex-g-1 "></div>
+          </div>
         </List>
-        <div className="forget">
-        </div>
+        <div className="login-btn">注册</div>
       </div>
     );
   }
